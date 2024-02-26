@@ -1,0 +1,42 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /home/impact/downloads/layout_practice/inverter130/untitled.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "/home/impact/Downloads/layout_practice/inverter130/simulation/untitled.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+No. of Data Columns : 12  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+in                                           0
+vcc                                        1.8
+inv_out                                    1.8
+vss#branch                        -2.03659e-12
+vin#branch                                   0
+
+
+No. of Data Rows : 11208
+
+Total analysis time (seconds) = 0.413
+
+Total elapsed time (seconds) = 21.741 
+
+Total DRAM available = 3650.562 MB.
+DRAM currently available =  486.414 MB.
+Maximum ngspice program size =  760.824 MB.
+Current ngspice program size =  664.555 MB.
+
+Shared ngspice pages =    9.125 MB.
+Text (code) pages =    5.070 MB.
+Stack = 0 bytes.
+Library pages =  743.797 MB.
+

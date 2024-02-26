@@ -1,0 +1,34 @@
+Inverter Simulation
+.lib "/home/impact/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+* instantiate the inverter
+Xinv A Y VPWR VGND inverter130_layout
+
+* NGSPICE file created from inverter130_layout.ext - technology: sky130A
+
+.subckt inverter130_layout A Y vdd gnd
+X0 Y A gnd gnd sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X1 Y A vdd vdd sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+C0 A vdd 0.0622f
+C1 Y vdd 0.159f
+C2 A Y 0.0469f
+.ends
+
+* set gnd and power
+Vgnd VGND 0 0
+Vdd VPWR VGND 1.8
+
+* create pulse
+Vin A VGND pulse(0 1.8 1p 10p 10p 1n 2n)
+.tran 10e-12 2e-09 0e-00
+
+.control
+run
+set color0 = white
+set color1 = black
+plot A Y
+
+.endc
+
+.end
+

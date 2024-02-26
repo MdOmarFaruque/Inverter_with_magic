@@ -1,0 +1,20 @@
+
+# Copy and paste this file into every one of your working directories
+
+# This file needs to be placed in every working directory so that xschem can find the correct location of the tech files
+
+# Configure xschem project directory to use sky130 symbols
+set XSCHEM_LIBRARY_PATH {}
+
+# XSCHEM TECH FILES
+append XSCHEM_LIBRARY_PATH :/usr/local/share/xschem/xschem_library
+append XSCHEM_LIBRARY_PATH :/usr/local/share/xschem/xschem_library/devices
+
+# SKY130 TECH FILES
+append XSCHEM_LIBRARY_PATH :/home/impact/tools/open_pdks/sky130/sky130A/libs.tech/xschem
+
+# model library is at directory: /home/impact/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice
+
+
+
+
